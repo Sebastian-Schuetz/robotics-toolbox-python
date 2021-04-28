@@ -1,4 +1,6 @@
 # Robotics Toolbox for Python
+# FORKED VERSION for the Institut. 
+# Includes the Omrom TM5 with a model of the coil and corresponding adapter
 
 [![PyPI version](https://badge.fury.io/py/roboticstoolbox-python.svg)](https://badge.fury.io/py/roboticstoolbox-python)
 [![Anaconda version](https://anaconda.org/conda-forge/roboticstoolbox-python/badges/version.svg)](https://anaconda.org/conda-forge/roboticstoolbox-python)
