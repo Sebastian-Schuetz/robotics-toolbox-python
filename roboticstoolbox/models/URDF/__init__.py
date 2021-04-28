@@ -1,4 +1,5 @@
 from roboticstoolbox.models.URDF.Panda import Panda
+from roboticstoolbox.models.URDF.OmronTM5_700 import OmronTM5_700
 from roboticstoolbox.models.URDF.Frankie import Frankie
 from roboticstoolbox.models.URDF.UR3 import UR3
 from roboticstoolbox.models.URDF.UR5 import UR5
@@ -21,6 +22,7 @@ from roboticstoolbox.models.URDF.YuMi import YuMi
 
 __all__ = [
     'Panda',
+    'OmronTM5_700',
     'Frankie',
     'UR3',
     'UR5',
