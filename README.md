@@ -13,6 +13,7 @@ Make sure to install the dependencies also from github. Testet with:
 - spatial math (v 0.9.5): https://github.com/petercorke/spatialmath-python
 - spatial geometry (v 0.1.2): https://github.com/jhavl/spatialgeometry
 - swift-sim (v 0.9.2): https://github.com/jhavl/swift
+
 Backup with the correct versions: https://github.com/robot-sim
 
 Working example 
