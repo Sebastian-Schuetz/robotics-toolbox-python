@@ -6,6 +6,11 @@ Is used to visualise the robot and solve the forward kinematic.
 Uses the official .urdf file from techman (partner of omron): https://github.com/TechmanRobotInc/tmr_ros1/tree/master/tm5_description
 The coil has been modeld in Fusion360 and added as a .stl file.
 
+Make sure to install the dependencies also from github. Testet with:
+- spatial math (v 0.9.5): https://github.com/petercorke/spatialmath-python
+- spatial geometry (v 0.1.2): https://github.com/jhavl/spatialgeometry
+- swift-sim (v 0.9.2): https://github.com/jhavl/swift
+
 Working example 
 ```python
 import roboticstoolbox as rtb
