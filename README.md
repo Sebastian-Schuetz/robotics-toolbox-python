@@ -2,6 +2,42 @@
 # FORKED VERSION for the Institut. 
 # Includes the Omrom TM5 with a model of the coil and corresponding adapter
 
+Is used to visualise the robot and solve the forward kinematic.
+Uses the official .urdf file from techman (partner of omron): https://github.com/TechmanRobotInc/tmr_ros1/tree/master/tm5_description
+The coil has been modeld in Fusion360 and added as a .stl file.
+
+Working example 
+```python
+import roboticstoolbox as rtb
+from roboticstoolbox.backends.swift import Swift  # instantiate 3D browser-based visualizer
+
+from spatialmath import SE3 #needed for inverse kinematics
+
+robot = rtb.models.URDF.OmronTM5_700() # load the Omron
+
+backend = Swift()           # load the backend
+backend.launch()            # activate it
+backend.add(robot)          # add robot to the 3D scene
+
+print(robot)
+
+import numpy as np
+from math import pi
+
+
+T = robot.fkine(np.array([0, 0, 0, 0, 0, 0]))  # forward kinematics for joint angles in upright position
+print(T.t) # Position
+print(T.R) # Rotationmatrix
+
+qt = rtb.jtraj(robot.qz, robot.qr, 50)
+
+for qk in qt.q:
+    robot.q = qk
+    backend.step()
+    print(qk)
+```
+
+
 [![PyPI version](https://badge.fury.io/py/roboticstoolbox-python.svg)](https://badge.fury.io/py/roboticstoolbox-python)
 [![Anaconda version](https://anaconda.org/conda-forge/roboticstoolbox-python/badges/version.svg)](https://anaconda.org/conda-forge/roboticstoolbox-python)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/roboticstoolbox-python.svg)
